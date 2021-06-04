@@ -4,7 +4,6 @@ import fetchAbout  from './aboutFetch.js';
 
 
 
-
 // Define a template
 
 
