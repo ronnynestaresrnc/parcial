@@ -31,50 +31,42 @@
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body" id="modal-card">
+        <img src="" alt="">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+     
     </div>
   </div>
 </div>
- <script>
-async function fetchApi (){
-
-const res = await  fetch("https://rickandmortyapi.com/api/character")
-const char =  await res.json();
-
-
- const listtable = char.results.map(Character =>{
-   const {name,status} = Character
-
-  $("#results-table").append(tableTemplate({name,status}));
-}) 
-
-  return char.results
+ <script type="module" src="About.js" >
   
-} 
-fetchApi()
+
+
+
+ 
+/* $("#results-table tr").click(function(){
+  $("#results-table tr").removeClass("table-info")
+    $(this).addClass("table-info")
+    var posicion = $(this).index();
+ console.log("dime la verdad"+posicion)
+ const template = (img)=>  `  <img src="${img}" alt="">`
+
+ })
+$("#modal-card").append(template())
+ 
+
+ */
+  
+
+
 
 
  
 
- const tableTemplate = ({name,status}) =>{
-  return `<tr>
-        <th scope="row">3</th>
-        <td colspan="2">${name}</td>
-        <td>${status}</td>
-      </tr> `
 
 
-}
-document.querySelector('tr').addEventListener('click',()=>{
 
-  console.log("dime la verdad")
-})
+
 //$("#results-table tr").click(function(){
  /*    $("#results-table tr").removeClass("table-info")
     $(this).addClass("table-info") */

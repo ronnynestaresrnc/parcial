@@ -1,19 +1,22 @@
 
 import fetchAbout  from './aboutFetch.js';
 
+$("#link-about").click(()=>{
+  fetchAbout()
+
+})
+$("#results-table tr").click(()=>{ 
+  $(this).addClass("table-info")
+  var posicion = $(this).index();
+  console.log(posicion)
+//  const img = character.results.map(({id,image})=>{})
+ 
+
+ // $("#modal-card").append(modalTemplate('dddd'))
+
+})
 
 
-
-// Define a template
-
-
-
-const  $linkAbout =document.getElementById("link-about")
-
-
-$linkAbout.addEventListener('click', 
-fetchAbout,
-)
 
 
 
@@ -29,8 +32,4 @@ fetchAbout,
 
 
   
- /*  const getPestaña = (pestaña) => {
-    fetch(`component/${pestaña}`)
-    .then(res=>res.text())
-    .then(data=>document.querySelector("#contenido-table").innerHTML = data);
-  }; */
+ 
